@@ -10,4 +10,11 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'crud-movie-angular';
+
+  openModal(){
+    const modal = document.getElementById('exampleModal');
+    if(modal != null){
+      modal.style.display = 'block'
+    }
+  }
 }
