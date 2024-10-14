@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-3">
+    <div *ngIf="movie" class="card mx-auto p-4 ">
+      <div class="card-header">
+        <div class=" shadow-lg-rounded-lg overflow-hidden">
+          <img [src]="movie.image" [alt]="movie.title" class="w-full h-64 object-cover" />
+          <h1 class="text-3x1 text-black-50  font-bold mb-2">
+            {{ movie.title }} Titulo
+          </h1>
+          <div class="p-6"></div>
+          <p class="text-gray-600 mb-4">{{ movie.description }}</p>
+          <div class="grd grid-cols-2 gap-4">
+            <div>
+              <p class="font-semibold">Director:</p>
+              <p>{{ movie.director }}</p>
+            </div>
+            <div>
+              <p class="font-semibold">Genre:</p>
+              <p>{{ movie.genre }}</p>
+            </div>
+            <div>
+              <p class="font-semibold">Release Year:</p>
+              <p>{{ movie.releaseYear }}</p>
+            </div>
+            <div>
+              <p class="font-semibold">Duration:</p>
+              <p>{{ movie.duration }} minutes</p>
+            </div>
+            <div>
+              <p class="font-semibold">Rating:</p>
+              <p>{{ movie.rating }}/10</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="mt-4 card-footer bg-grey">
+        <a
+          routerLink="/movies"
+          class="bg-ble-500 hover:bg-ble-700 text-black-14 font-bold py-2 px-4 rounded"
+        > 
+          Volver a la Lista de Peliculas
+        </a>
+      </footer>
+    </div>
+  </div>
+</div>

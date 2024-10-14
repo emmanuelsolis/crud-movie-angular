@@ -1,20 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { MovieListComponent } from './movie-list/movie-list.component';
+import { MovieDetailComponent } from './movie-detail/movie-detail.component';
+import { MovieFormComponent } from './movie-form/movie-form.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, MovieDetailComponent, MovieListComponent, MovieFormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'crud-movie-angular';
+  @ViewChild('exampleModal') model: ElementRef | undefined;
 
   openModal(){
-    const modal = document.getElementById('exampleModal');
-    if(modal != null){
-      modal.style.display = 'block'
+    if (this.model && this.model.nativeElement) {
+      this.model.nativeElement.style.display = 'block';
+    }
+  }
+  closeModal() {
+    if (this.model && this.model.nativeElement) {
+      this.model.nativeElement.style.display = 'none';
     }
   }
 }
