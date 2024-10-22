@@ -4,17 +4,17 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Agregue la información de la Pelicula</h5>
-          <button type="button" class="btn-close" (click)="closeModal()" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form>
+          <form (submit)="addMovie()">
             <div class="mb-3">
               <label for="title" class="form-label">Title</label>
-              <input type="text" class="form-control" id="title" formControlName="title">
+              <input type="text" class="form-control" id="title" formControlName="title" #title>
             </div>
             <div class="mb-3">
               <label for="description" class="form-label">Description</label>
-              <textarea class="form-control" id="description" formControlName="description"></textarea>
+              <textarea class="form-control" id="description" formControlName="description" #description></textarea>
             </div>
             <div class="mb-3">
               <label for="image" class="form-label">Image URL</label>
@@ -40,11 +40,11 @@
               <label for="rating" class="form-label">Rating</label>
               <input type="number" class="form-control" id="rating" formControlName="rating" step="0.1" min="0" max="10">
             </div>
+            <button type="submit" class="btn btn-primary">Guardar cambios</button>
           </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Guardar cambios</button>
         </div>
       </div>
     </div>

@@ -1,19 +1,5 @@
-<div class="container">
-  <div class="row pt-3">
-    <div class="col-6">
-      <h4>Panel de Peliculas</h4>
-    </div>
-    <div class="row">
-      <div class="col-3 text-start">
-        <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="openModal()" >
-          Añade nueva Pelicula
-        </button>
-      </div>
-    </div>
-  </div>
-  
-  <app-movie-detail></app-movie-detail>
-</div>
+<app-navigation></app-navigation>
+<app-movie-detail></app-movie-detail>
 <!-- Modal -->
 <app-movie-form></app-movie-form>
 <router-outlet></router-outlet>

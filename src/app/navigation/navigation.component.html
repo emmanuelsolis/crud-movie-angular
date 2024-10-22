@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <!-- Título o Marca -->
+    <a class="navbar-brand" routerLink="/">Mi Sitio de Películas</a>
+    <!-- Botón para dispositivos móviles -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Enlaces de navegación -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <!-- Enlace de Inicio -->
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/inicio">Inicio</a>
+        </li>
+      </ul>
+      <!-- Botones de Categorías -->
+      <div class="d-flex">
+        <a class="btn btn-outline-primary me-2" routerLink="/categorias/accion">Acción</a>
+        <a class="btn btn-outline-primary me-2" routerLink="/categorias/comedia">Comedia</a>
+        <a class="btn btn-outline-primary me-2" routerLink="/categorias/drama">Drama</a>
+        <a class="btn btn-outline-primary me-2" routerLink="/categorias/terror">Terror</a>
+        <a class="btn btn-outline-primary" routerLink="/categorias/ciencia-ficcion">Ciencia Ficción</a>
+        <!-- Agrega más categorías si lo deseas -->
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="container-fluid">
+  <div class="row pt-3 text-center">
+    <h4>Panel de Peliculas</h4>
+  </div>
+  <div class="col-3 pl-3 text-center">
+    <button
+      class="btn btn-outline-success"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      Añade nueva Pelicula
+    </button>
+  </div>
+</div>
